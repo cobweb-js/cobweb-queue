@@ -1,3 +1,4 @@
 {
-  "name": "cobweb-queue"
+  "name": "cobweb-queue",
+  "description": "Adds queuing functionality to Cobweb"
 }
