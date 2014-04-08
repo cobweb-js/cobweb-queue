@@ -1,4 +1,22 @@
 {
   "name": "cobweb-queue",
-  "description": "Adds queuing functionality to Cobweb"
+  "version": "0.0.1",
+  "description": "Adds queuing functionality to Cobweb",
+  "repository": "dbalcomb/cobweb-queue",
+  "keywords": [
+    "web",
+    "analysis",
+    "framework",
+    "middleware",
+    "spider",
+    "crawler",
+    "queue"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cobweb": ">= 0.0.5",
+    "cobweb-compose": ">= 0.0.3",
+    "co": "~3.0.5",
+    "co-limiter": "~1.0.0"
+  }
 }
