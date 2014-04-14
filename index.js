@@ -31,7 +31,7 @@ queue.add = function (input, callback, priority) {
         self.queue(mwf.bind(ctx), priority || 1)(done);
       }
     });
-    if (callback) callback.call(queue);
+    if (callback) callback.call(self);
   })(this);
 }
 
