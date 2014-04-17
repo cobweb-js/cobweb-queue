@@ -1,6 +1,6 @@
 {
   "name": "cobweb-queue",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adds queuing functionality to Cobweb",
   "repository": "dbalcomb/cobweb-queue",
   "keywords": [
@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "cobweb": ">= 0.0.5",
+    "cobweb": ">= 0.0.7",
     "cobweb-compose": ">= 0.0.3",
     "co": "~3.0.5",
     "co-limiter": "~1.0.0"

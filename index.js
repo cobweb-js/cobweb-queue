@@ -24,15 +24,18 @@ queue.initialize = function (concurrency, middleware) {
 queue.add = function (input, callback, priority) {
   if (!Array.isArray(input)) input = [input];
   co(function* (self) {
-    yield input.map(function (item) {
+    var contexts = input.map(function (item) {
+      return self.createContext(item);
+    });
+    yield contexts.map(function (ctx) {
       return function (done) {
         var mwf = co(compose(self.middleware));
-        var ctx = self.createContext(item);
         self.queue(mwf.bind(ctx), priority || 1)(done);
       }
     });
-    if (callback) callback.call(self);
+    if (callback) callback.call(self, contexts);
   })(this);
+  return this;
 }
 
 // Queue Context
